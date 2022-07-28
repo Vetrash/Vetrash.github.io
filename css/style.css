@@ -80,7 +80,7 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
+ul {
   list-style: none;
 }
 
@@ -251,6 +251,45 @@ h6 {
   }
 }
 
+.top img {
+  -webkit-animation: arrow 3s linear infinite;
+          animation: arrow 3s linear infinite;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
 .cover {
   position: fixed;
   top: 0;
@@ -263,17 +302,28 @@ h6 {
 }
 
 .okno {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: relative;
 }
 
 .cross {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
+  z-index: 20;
   cursor: pointer;
+}
+
+.imgSertificat {
+  margin: auto;
+  position: absolute;
+  max-height: 90%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .context {
@@ -290,10 +340,12 @@ h6 {
 .context p {
   text-align: center;
   color: #DBEDF3;
-  font-size: 50px;
-  line-height: 2;
+  line-height: 1.5;
   font-family: "Press Start 2P";
-  font-size: calc(25px + 25 * ((100vw - 320px) / 960));
+  font-size: calc(20px + 10 * ((100vw - 320px) / 960));
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .context .button {
@@ -303,7 +355,7 @@ h6 {
   border: #DBEDF3 5px solid;
   padding: 10px;
   border-radius: 5px;
-  font-size: calc(25px + 25 * ((100vw - 320px) / 960));
+  font-size: calc(20px + 10 * ((100vw - 320px) / 960));
   margin-top: 50px;
   display: inline-block;
 }
@@ -320,17 +372,20 @@ h6 {
 .title {
   color: #484848;
   font-family: "Press Start 2P";
-  font-size: 28px;
   padding-top: 50px;
   padding-bottom: 30px;
-  font-size: calc(20px + 8 * ((100vw - 320px) / 960));
+  text-align: center;
+  font-size: calc(20px + 5 * ((100vw - 320px) / 960));
 }
 
 .about-conteiner p {
+  text-indent: 20px;
+}
+
+.about-conteiner {
   color: #484848;
   font-family: "Roboto";
   text-align: justify;
-  width: 95%;
   line-height: 1.4;
   font-size: calc(20px + 5 * ((100vw - 320px) / 960));
 }
@@ -339,9 +394,10 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   -ms-flex-wrap: wrap;
@@ -349,41 +405,48 @@ h6 {
 }
 
 .about-me {
-  width: 45%;
+  text-align: justify;
+  width: 70%;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .experience-conteiner {
-  width: 45%;
+  text-align: justify;
+  width: 70%;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-conteiner ul {
+  list-style: circle;
 }
 
 .sertifikat-conteiner {
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-}
-
-.sertifikat-conteiner .title {
-  text-align: center;
 }
 
 .sertifikat-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
-  row-gap: 40px;
+  gap: 40px;
+  padding-top: 30px;
 }
 
 .sertifikat {
-  width: 30%;
+  width: 45%;
   display: block;
-  padding-bottom: 30px;
 }
 
 /*.sertifikat p{  
@@ -391,63 +454,53 @@ h6 {
   margin-bottom: 20px;
 }*/
 
-.sertifikat picture {
-  width: 100%;
-  height: 300px;
-}
-
 picture img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  height: 100%;
 }
 
 .futureSertificat {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #484848;
   font-family: "Press Start 2P";
   font-size: 28px;
   text-align: center;
   border: #484848 3px solid;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100px;
   cursor: auto;
 }
 
 .futureSertificat p {
-  position: absolute;
   font-family: "Press Start 2P";
   color: #484848;
-  font-size: 30px;
-  z-index: 10;
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: calc(15px + 5 * ((100vw - 320px) / 960));
   width: 90%;
-  height: 30px;
   text-align: center;
+  text-indent: 0px;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .caption {
   color: #484848;
   font-family: "Roboto";
-  font-size: calc(20px + 5 * ((100vw - 320px) / 960));
+  text-align: center;
+  padding-top: 10px;
+  font-size: calc(17px + 8 * ((100vw - 320px) / 960));
 }
 
 .project-conteiner {
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.project-conteiner .title {
-  text-align: center;
 }
 
 .project-flex {
@@ -456,19 +509,25 @@ picture img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
 }
 
 .project {
   width: 45%;
   display: block;
+  position: relative;
 }
 
 .project picture {
   width: 100%;
   height: 300px;
+}
+
+.project img {
+  border: #484848 3px solid;
 }
 
 .project p {
@@ -487,6 +546,7 @@ picture img {
   width: 90%;
   height: 30px;
   text-align: center;
+  font-size: calc(15px + 5 * ((100vw - 320px) / 960));
 }
 
 .project:hover p {
@@ -499,19 +559,29 @@ picture img {
 
 .future-project {
   border: #484848 3px solid;
-  position: relative;
 }
 
 .future-project p {
   opacity: 1;
-  height: 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .contact-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   gap: 20px;
@@ -521,7 +591,12 @@ picture img {
 }
 
 .contact-item {
-  width: 120px;
+  width: 60px;
+}
+
+.contact-conteiner {
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .contact-conteiner .title {
@@ -532,25 +607,29 @@ picture img {
   text-align: center;
   text-decoration: none;
   color: #484848;
-  font-size: 30px;
   font-family: "Roboto";
   margin-left: auto;
   margin-right: auto;
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 960));
 }
 
 .top {
   width: 60px;
   height: 100px;
-  background: #D72323;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /*background: #D72323;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+
   margin-top: 60px;
-  position: relative;
+  position: relative*/
 }
 
 .top p {
@@ -560,61 +639,47 @@ picture img {
   line-height: 100px;
 }
 
-.contact-conteiner {
-  padding-bottom: 100px;
-}
-
 @media (min-width: 767px) {
   .context p {
-    font-size: calc(25px + 25*(100vw/960));
+    font-size: calc(20px + 10*(100vw/960));
   }
 
   .context .button {
-    font-size: calc(25px + 25*(100vw/960));
+    font-size: calc(20px + 10*(100vw/960));
   }
 
   .title {
-    font-size: calc(20px + 8*(100vw/960));
+    font-size: calc(20px + 5*(100vw/960));
   }
 
-  .about-conteiner p {
+  .about-conteiner {
     font-size: calc(20px + 5*(100vw/960));
+  }
+
+  .futureSertificat p {
+    font-size: calc(15px + 5*(100vw/960));
   }
 
   .caption {
-    font-size: calc(20px + 5*(100vw/960));
+    font-size: calc(17px + 8*(100vw/960));
+  }
+
+  .project p {
+    font-size: calc(15px + 5*(100vw/960));
+  }
+
+  .contact-phone {
+    font-size: calc(20px + 10*(100vw/960));
   }
 }
 
-@media (max-width: 1214px) {
-  .futureSertificat p {
-    height: 60px;
-  }
-}
-
-@media (max-width: 920px) {
-  .future-project p {
-    height: 60px;
-  }
-}
-
-@media (max-width: 850px) {
-  .about-me {
-    width: 100%;
-  }
-
-  .experience-conteiner {
-    width: 100%;
+@media (max-width: 1000px) {
+  .sertifikat {
+    width: 45%;
   }
 }
 
 @media (max-width: 800px) {
-  .sertifikat-flex {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .sertifikat {
     width: 90%;
   }
@@ -622,10 +687,6 @@ picture img {
   .futureSertificat {
     margin-left: 0px;
     margin-right: 0px;
-  }
-
-  .futureSertificat p {
-    height: 30px;
   }
 
   .project-flex {
@@ -639,20 +700,6 @@ picture img {
   }
 
   .future-project {
-    padding-top: 50%;
-  }
-
-  .future-project p {
-    height: 30px;
-  }
-}
-
-@media (max-width: 460px) {
-  .futureSertificat p {
-    height: 80px;
-  }
-
-  .future-project p {
-    height: 60px;
+    padding-top: 42%;
   }
 }

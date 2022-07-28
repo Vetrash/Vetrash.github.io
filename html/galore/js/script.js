@@ -210,7 +210,7 @@ function rightWork(){
 
 //Запись
 let btn = document.querySelector('.btn')
-let nameUser = document.querySelector('.name')
+let nameUser = document.querySelector('.username')
 let phone = document.querySelector('.tel')
 let servis = document.querySelector('.servis')
 btn.addEventListener("click", submit);

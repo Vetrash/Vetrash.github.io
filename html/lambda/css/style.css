@@ -555,7 +555,7 @@ h6 {
   line-height: 1.2;
   font-weight: 400;
   font-style: italic;
-  color: #7c7c7c;
+  color: #161616;
   height: 36px;
   border: 1px solid #c89f2d;
   padding-left: 20px;
@@ -564,43 +564,43 @@ h6 {
 }
 
 input.form-input::-webkit-input-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 input.form-input::-moz-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 input.form-input:-ms-input-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 input.form-input::-ms-input-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 input.form-input::placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 ::-webkit-input-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 ::-moz-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 /* Firefox 19+ */
 
 :-moz-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 /* Firefox 18- */
 
 :-ms-input-placeholder {
-  color: #7c7c7c;
+  color: #161616;
 }
 
 .buttom-form {
@@ -670,6 +670,10 @@ input.form-input::placeholder {
 
 .center {
   text-align: center;
+}
+
+input:invalid {
+  border-bottom: 3px solid red;
 }
 
 @media (max-width: 1024px) {

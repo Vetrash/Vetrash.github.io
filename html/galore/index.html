@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <picture><source srcset="img/vektornyy_smart_obekt_3.webp" type="image/webp"><img class="logo" src="img/vektornyy_smart_obekt_3.png" alt="лого Galore"></picture>
         <div class="UpMenu">
             <div class="UpMenu-Adres">
-                <p class="f24">г. Челябинск, ул. Курчатова 25</p>
+                <p class="f24">г. Челябинск,<br> ул. Курчатова 25</p>
                 <a class="f14 right-align br-bt" href="#contact">смотреть на карте</a>
             </div>
             <div class="UpMenu-Number">
@@ -214,33 +214,34 @@
     <a name="form"></a>
     <div class="form-back"></div>
     <p class="article white art-form">ЗАПИСАТЬСЯ В САЛОН</p>
-    <form action="#">
+    <form action="#" method="POST">
         <div class="flex-input">
             <div class="blok-input">
                 <p class="f18 white ">Ваше имя</p>
-                <input class="f18 white br-bt name" type="text" placeholder="имя">
+                <input class="f18 white br-bt username" type="text" placeholder="имя" required >
             </div>
     
             <div class="blok-input">
                 <p class="f18 white">Номер телефона</p>
-                <input class="br-bt f18 white tel" type="tel" placeholder="+7 (___)-___-__-__">
+                <input class="br-bt f18 white tel" type="tel" required maxlength="17" placeholder="+7(___)-___-__-__">
             </div>
     
             <div class="blok-input">
                 <p class="f18 white ">Название услуги</p>
-                <input class="f18 white br-bt servis" type="text" placeholder="услуга">
+                <input class="f18 white br-bt servis" type="text" required placeholder="услуга">
             </div>
         </div>
         
         
         
         <div class="btn">
-            <input class="f30 white" type="button" value="Отправить">
+            <input class="f30 white" type="submit" value="Отправить">
             <picture><source srcset="img/vektornyy_smart_obekt_84.webp" type="image/webp"><img src="img/vektornyy_smart_obekt_84.png" alt=""></picture>
         </div>
         
     </form>
 </div>
+    <script src="js/validator.js"></script>
     <div class="masters-container">
     <a name="masters"></a>
     <p class="article masters-sertificate">МАСТЕРА</p>
@@ -351,13 +352,16 @@
     <div class="contact-back"></div>
     <p class="article art-sertificate white">КОНТАКТЫ</p>
     <div class="contact-block">
-        <div class="map">
+        <div class="map m411">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa094ec7c41b2f8ebcbe2b0166386fde2f60a89e17127e6e81b159444102a0f49&amp;width=411&amp;height=311&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="map m320">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa094ec7c41b2f8ebcbe2b0166386fde2f60a89e17127e6e81b159444102a0f49&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="info">
             <p class="f23 white">г. Челябинск, ул. Курчатова 25</p>
             <p class="f23 white">График работы:</p>
-            <p class="f16 white"> пн-пт 10:00 - 21:00 <br>
+            <p class="f23 white"> пн-пт 10:00 - 21:00 <br>
                 сб-вс 9:00 - 20:00</p>
                 <div class="contact-flex-block">
                     <div class="contact-left-collomn">

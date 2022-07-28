@@ -106,6 +106,11 @@ h6 {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
 .conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,6 +235,7 @@ h6 {
 }
 
 .button {
+  display: block;
   max-width: 430px;
   height: 100px;
   border: 3px solid #ffffff;
@@ -361,6 +367,7 @@ h6 {
 }
 
 .button-ui {
+  display: block;
   margin: 0 auto;
   max-width: 370px;
   min-width: 200px;
@@ -397,19 +404,20 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  flex-wrap: wrap;
   width: 90%;
 }
 
 .company a {
-  width: 45%;
+  width: 20%;
 }
 
 .company img {
-  width: 100%;
+  width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
   min-width: 100px;
@@ -420,6 +428,9 @@ h6 {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .company img:hover {
@@ -443,9 +454,11 @@ h6 {
 }
 
 .person {
+  display: block;
   width: 20%;
   height: auto;
   position: relative;
+  text-decoration: none;
 }
 
 .person img {
@@ -532,6 +545,7 @@ h6 {
 }
 
 .hiring-botton {
+  display: block;
   width: 90%;
   height: 40px;
   border: 3px solid #222222;
@@ -695,6 +709,20 @@ video {
   margin-top: 80px;
 }
 
+textarea {
+  font-family: Amble;
+  font-size: 18px;
+  line-height: 20px;
+  color: #676767;
+  border-bottom: 2px solid #afafaf;
+  background: #e4e4e4;
+  padding-left: 10px;
+  height: 20px;
+  min-height: 20px;
+  min-width: 90%;
+  margin-top: 80px;
+}
+
 .formitem :last-child {
   padding-left: 10px;
   margin-top: 20px;
@@ -726,6 +754,10 @@ video {
   background-color: rgba(22, 22, 22, 0.411);
   border: 3px solid #222222;
   color: #fff;
+}
+
+input:invalid {
+  border: 2px dashed red;
 }
 
 @media (min-width: 500px) {
@@ -778,6 +810,12 @@ video {
   }
 }
 
+@media (max-width: 600px) {
+  .company a {
+    width: 40%;
+  }
+}
+
 @media (max-width: 580px) {
   .formitem {
     -webkit-box-orient: vertical;
@@ -789,6 +827,13 @@ video {
   }
 
   .formitem input {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  textarea {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -808,6 +853,16 @@ video {
   .mobil-ui {
     width: 100%;
     min-height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .company a {
+    width: 50%;
+  }
+
+  .company img {
+    width: 100%;
   }
 }
 
